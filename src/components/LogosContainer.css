@@ -1,7 +1,7 @@
 .container--top,
 .container--bottom {
   display: flex;
-  height: 150px;
+  height: 10vh;
   overflow: hidden;
 }
 
@@ -23,6 +23,7 @@
 }
 
 .logo {
+  width: 12vw;
   opacity: 0.3;
   transition: all 0.4s;
   cursor: pointer;
