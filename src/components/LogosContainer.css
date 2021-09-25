@@ -1,4 +1,43 @@
-.container {
+.container--top,
+.container--bottom {
   display: flex;
   height: 150px;
+  overflow: hidden;
+}
+
+.slider--top,
+.slider--bottom {
+  display: flex;
+  /* position: relative; */
+
+  justify-content: space-around;
+  min-width: 100%;
+}
+
+.slider--top {
+  animation: move 8s linear infinite;
+}
+
+.slider--bottom {
+  animation: move 10s linear infinite;
+}
+
+.logo {
+  opacity: 0.3;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.logo:hover {
+  opacity: 1;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }

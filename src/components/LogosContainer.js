@@ -1,14 +1,29 @@
 import React from "react";
-import { logoPathTop } from "../constants/logoPath";
+import { logoPathTop, logoPathBot } from "../constants/logoPath";
 import "./LogosContainer.css";
-import Icon from "./Logo";
+import Logo from "./Logo";
 
 const LogosContainer = () => {
-  const logosArr = logoPathTop.map((logoPath) => {
-    return <Icon name={logoPath} />;
+  const logosTopArr = logoPathTop.map((logoPath) => {
+    return <Logo name={logoPath} where="top" key={logoPath} />;
   });
 
-  return <div className="container">{logosArr}</div>;
+  const logosBotArr = logoPathBot.map((logoPath) => {
+    return <Logo name={logoPath} where="bottom" key={logoPath} />;
+  });
+
+  return (
+    <div className="container">
+      <div className="container--top">
+        <div className="slider--top">{logosTopArr}</div>
+        <div className="slider--top">{logosTopArr}</div>
+      </div>
+      <div className="container--bottom">
+        <div className="slider--bottom">{logosBotArr}</div>
+        <div className="slider--bottom">{logosBotArr}</div>
+      </div>
+    </div>
+  );
 };
 
 export default LogosContainer;
